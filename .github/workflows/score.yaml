@@ -15,5 +15,4 @@ jobs:
       - name: Rott-dev
         uses: rott-dev/action@v1
         with:
-          repository: sample-shared-rules
           github_token: ${{ secrets.SHARED_RULES_TOKEN }}
