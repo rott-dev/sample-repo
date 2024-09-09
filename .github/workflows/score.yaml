@@ -1,0 +1,19 @@
+name: Test Rott.dev
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  test:
+    name: Test Rott.dev
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Rott-dev
+        uses: rott-dev/action@v1.1.0
+        with:
+          repository: sample-shared-rules
+          github_token: ${{ secrets.SHARED_RULES_TOKEN }}

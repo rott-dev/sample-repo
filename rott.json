@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Check if score.yaml is present",
+    "category": "documentation",
+    "location": ".github/workflows/score.yaml",
+    "severity": "info",
+    "fileType": "text",
+    "test": [
+      {
+        "option": "/[\\S\\s]+/gm",
+        "score": 3,
+        "match": "score.yaml is present",
+        "notMatch": "score.yaml is missing",
+        "continue": false
+      },
+      {
+        "option": "/name: /",
+        "score": 3,
+        "match": "score.yaml has name",
+        "notMatch": "score.yaml not has name"
+      }
+    ]
+  }
+]
